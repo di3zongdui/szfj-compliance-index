@@ -104,20 +104,21 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 ## 四、快速开始
 
 **直接下载**：见仓库根目录 `data/` 目录，或
-[Release v1.0.3](https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.3)。
+[Release v1.0.4](https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.4)。
 
 **下载地址**
 
 | 用途 | 地址 |
 |---|---|
-| 固定版本（引用时请用这个） | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/<文件名>` |
+| 固定版本（引用时请用这个） | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.4/<文件名>` |
 | 跟随最新发布 | `https://github.com/di3zongdui/szfj-compliance-index/releases/latest/download/<文件名>` |
 | 跟随最新更正 | `https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main/<路径>` |
-| 国内访问 | 魔搭 ModelScope / 和鲸社区 ModelWhale，见下方「分发平台」 |
+| 国内访问（魔搭） | `https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index` |
+| 国内访问（和鲸） | `https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053` |
 
 **分发平台**
 
-**唯一权威源是 GitHub 仓库 [`di3zongdui/szfj-compliance-index`](https://github.com/di3zongdui/szfj-compliance-index) 的 tag `v1.0.3`。**
+**唯一权威源是 GitHub 仓库 [`di3zongdui/szfj-compliance-index`](https://github.com/di3zongdui/szfj-compliance-index) 的 tag `v1.0.4`。**
 
 > **不要用 `v1.0.0`**。它的数据文件与本版本等价（`data/*.csv`、`data/*.jsonl`
 > 逐字节相同；`data/*.json` 仅 2 个 `meta` 字段不同），但它的 zip 内附 README
@@ -126,14 +127,36 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 
 为便于国内网络访问，本数据集另在以下平台同步发布，**文件内容逐字节相同**：
 
-| 平台 | 定位 |
-|---|---|
-| GitHub（主源） | 权威版本、Git 历史、Release 归档 |
-| 魔搭 ModelScope | 国内访问、页面预览、SDK 加载 |
-| 和鲸社区 ModelWhale | 国内访问、在线 Notebook 直接挂载复算 |
+| 平台 | 地址 | 定位 |
+|---|---|---|
+| GitHub（主源） | <https://github.com/di3zongdui/szfj-compliance-index> | 权威版本、Git 历史、Release 归档 |
+| 魔搭 ModelScope | <https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index> | 国内访问、页面预览、SDK 加载 |
+| 和鲸社区 ModelWhale | <https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053> | 国内访问、在线 Notebook 直接挂载复算 |
 
 三个平台随附的 `MANIFEST.sha256` 哈希值完全一致，可逐文件交叉核对。
 **若某平台内容与 GitHub 主源不一致，一律以 GitHub 主源为准。**
+
+**国内平台怎么用**
+
+魔搭（SDK 一行加载）：
+
+```bash
+pip install modelscope
+modelscope download --dataset di3zongdui/szfj-compliance-index --local_dir ./szfj-compliance-index
+```
+
+和鲸（在线复算，不用装任何东西）：
+
+1. 打开 <https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053>
+2. 新建项目 → 挂载本数据集（默认挂载目录 `/home/mw/input/szfj_compliance<四位数字>/`）
+3. 在 Notebook 中执行：
+
+```python
+import subprocess, os
+BASE = next(p for p in __import__('glob').glob('/home/mw/input/szfj_compliance*/szfj-compliance-index-v1.0'))
+print(subprocess.run(['python', os.path.join(BASE, 'scripts/verify_dataset.py')],
+                     cwd=BASE, capture_output=True, text=True).stdout[-3000:])
+```
 
 > **除上述本中心自行发布的平台之外，本数据集不授权任何第三方镜像站或代理通道。**
 > 原因：第三方镜像可能指向旧提交、或在转发时改动编码，导致你手上的副本与我们
@@ -143,7 +166,7 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 例：下载 CSV（Release 固定版本）
 
 ```bash
-curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/szfj-compliance-index-v1.0.csv
+curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.4/szfj-compliance-index-v1.0.csv
 ```
 
 **Python（pandas）**
@@ -173,8 +196,8 @@ curl -sL https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main
 **校验完整性**
 
 ```bash
-curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/szfj-compliance-index-v1.0.3.zip
-unzip szfj-compliance-index-v1.0.3.zip
+curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.4/szfj-compliance-index-v1.0.4.zip
+unzip szfj-compliance-index-v1.0.4.zip
 cd szfj-compliance-index-v1.0
 sha256sum -c MANIFEST.sha256
 ```
@@ -282,4 +305,4 @@ GitHub 页面右上角另有 **Cite this repository** 按钮，可直接导出�
 发布主体：上海中外合办升学数据研究中心
 标准制定：中外合作办学名录标准委员会（内设机构，不单独登记）
 研究支持：上海国际教育路径研究所（IEPI）
-作者：李洪（上海中外合办升学数据研究中心 CEO）
+作者：李洪（上海中外合办升学数据研究中心 首席顾问）

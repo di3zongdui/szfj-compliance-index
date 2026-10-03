@@ -58,7 +58,7 @@ https://github.com/di3zongdui/szfj-compliance-index.
   title     = {中外合作办学项目合规名录（SZFJ Compliance Index）},
   author    = {李洪},
   year      = {2026},
-  version   = {1.0.3},
+  version   = {1.0.4},
   publisher = {上海中外合办升学数据研究中心},
   address   = {上海},
   license   = {CC BY 4.0},
@@ -100,16 +100,22 @@ Li, Hong. 2026. SZFJ Compliance Index: A Compliance Registry of
 
 | 项 | 值 |
 |---|---|
-| 当前版本（引用与下载用） | 1.0.3 |
+| 当前版本（引用与下载用） | 1.0.4 |
 | 数据版本号（数据文件命名用） | v1.0 |
 | 数据时点 | 2026-09-30 |
-| Release | https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.3 |
+| Release（主源） | https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.4 |
+| 国内镜像（魔搭） | https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index |
+| 国内镜像（和鲸） | https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053 |
 | DOI | 暂未申请 |
 
 > **两个版本号不是一回事**，这是刻意的：`v1.0` 是**数据版本**（决定数据文件名
-> `szfj-compliance-index-v1.0.*` 与站点展示）；`v1.0.3` 是**发布 tag**（决定下载与
-> 引用指向）。v1.0.0 → v1.0.3 之间只有文档与校验链更正，587 条记录未变。
-> 引用与下载一律用 `v1.0.3`。
+> `szfj-compliance-index-v1.0.*` 与站点展示）；`v1.0.4` 是**发布 tag**（决定下载与
+> 引用指向）。v1.0.0 → v1.0.4 之间只有文档、署名与校验链更正，587 条记录未变。
+> 引用与下载一律用 `v1.0.4`。
+
+> **引用时 URL 填哪个**：正式文献里请填 GitHub 主源地址（上表 Release 一行）——
+> 它是唯一权威源。国内平台地址用于**访问**，不用于**引用**：镜像可能因网络策略
+> 变动而下线，引用一个会消失的地址，等于让你的参考文献失效。
 
 **关于 DOI**：如需在正式出版场景引用，建议使用 Release 页面上的固定链接
 （该链接指向不可变版本，而不是 `main` 分支）。仓库已放置 `.zenodo.json`，

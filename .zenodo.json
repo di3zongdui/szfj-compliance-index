@@ -28,12 +28,22 @@
     "compliance"
   ],
   "language": "zho",
-  "version": "1.0.0",
-  "publication_date": "2026-09-30",
+  "version": "1.0.4",
+  "publication_date": "2026-10-03",
   "related_identifiers": [
     {
       "identifier": "https://github.com/di3zongdui/szfj-compliance-index",
       "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index",
+      "relation": "isIdenticalTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053",
+      "relation": "isIdenticalTo",
       "resource_type": "dataset"
     }
   ],

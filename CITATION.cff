@@ -9,7 +9,7 @@ abstract: >-
   合规层级与合规风险等级，并附信息来源。用于回答「这个项目是不是真的」
   这类合规判定问题，不做院校声誉评比。
 type: dataset
-version: "1.0.3"
+version: "1.0.4"
 date-released: "2026-10-03"
 license: CC-BY-4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
@@ -34,8 +34,16 @@ authors:
   - name: "上海中外合办升学数据研究中心"
 identifiers:
   - type: url
-    value: "https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.3"
-    description: "Release v1.0.3 (stable download; data version v1.0, 2026-09-30)"
+    value: "https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.4"
+    description: "Release v1.0.4 (stable download; data version v1.0, 2026-09-30)"
+  # 国内镜像。放在同样的 identifiers 列表里，是为了让「导出引用」这一步就能拿到
+  # 三处地址 —— 引用者的网络环境未必能直连 GitHub，而我们又要求以主源为准。
+  - type: url
+    value: "https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index"
+    description: "Mirror (ModelScope 魔搭); byte-identical to the GitHub primary source"
+  - type: url
+    value: "https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053"
+    description: "Mirror (ModelWhale 和鲸社区); byte-identical to the GitHub primary source"
 contact:
   - family-names: "李"
     given-names: "洪"

@@ -60,9 +60,23 @@ cooperative education in mainland China:
 
 | Use | URL |
 |---|---|
-| Pinned version (use this when citing) | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/<filename>` |
+| Pinned version (use this when citing) | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.4/<filename>` |
 | Follow the latest release | `https://github.com/di3zongdui/szfj-compliance-index/releases/latest/download/<filename>` |
 | Latest corrections | `https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main/<path>` |
+| China mirror (ModelScope) | `https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index` |
+| China mirror (Heywhale) | `https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053` |
+
+## Distribution
+
+The **authoritative source** is the GitHub repository tag `v1.0.4`. The dataset is
+mirrored on two China-accessible platforms; **file contents are byte-identical**,
+and the shipped `MANIFEST.sha256` matches across all three.
+
+| Platform | URL | Purpose |
+|---|---|---|
+| GitHub (primary) | <https://github.com/di3zongdui/szfj-compliance-index> | authoritative version, git history, release archive |
+| ModelScope 魔搭 | <https://modelscope.cn/datasets/di3zongdui/szfj-compliance-index> | China access, in-browser preview, SDK download |
+| ModelWhale 和鲸社区 | <https://www.heywhale.com/mw/dataset/6ac0979b6e0ebe066408e053> | China access, mount directly into an online notebook and re-run the verification script |
 
 > **Do not use `v1.0.0`.** Its data files are equivalent to this release
 > (`data/*.csv` and `data/*.jsonl` are byte-identical; `data/*.json` differs only
