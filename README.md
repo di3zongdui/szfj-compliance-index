@@ -69,10 +69,13 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 |---|---|---|
 | 2+2 | 81 | 59.1% |
 | 3+1 | 34 | 24.8% |
+| 灵活 | 7 | 5.1% |
 | 4+0 | 6 | 4.4% |
 | 1+N | 6 | 4.4% |
-| 灵活 | 7 | 5.1% |
+| 3+0 | 1 | 0.7% |
+| 2+1 | 1 | 0.7% |
 | 其他 | 1 | 0.7% |
+| **合计** | **137** | **100%** |
 
 **对接方向（关键词计数，各方向不可加总）**
 
@@ -103,17 +106,33 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 **直接下载**：见仓库根目录 `data/` 目录，或
 [Release v1.0.0](https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.0)。
 
-**下载地址**（均为本仓库官方地址）
+**下载地址**
 
 | 用途 | 地址 |
 |---|---|
-| 固定版本（推荐） | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.0/<文件名>` |
+| 固定版本（推荐，权威源） | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.0/<文件名>` |
 | 跟随最新更正 | `https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main/<路径>` |
+| 国内访问 | 魔搭 ModelScope / 和鲸社区 ModelWhale，见下方「分发平台」 |
 
-> **本数据集只从上述官方地址分发，不授权任何第三方镜像站或代理通道。**
-> 原因：镜像可能指向旧提交、或在转发时改动编码，导致你手上的副本与我们发布的
-> 版本无法对应。一旦出现引用争议，无法追溯。若你所在网络无法直连上述域名，
-> 请提 Issue 说明，我们提供离线副本。
+**分发平台**
+
+**唯一权威源是 GitHub 仓库 [`di3zongdui/szfj-compliance-index`](https://github.com/di3zongdui/szfj-compliance-index) 的 tag `v1.0.0`。**
+
+为便于国内网络访问，本数据集另在以下平台同步发布，**文件内容逐字节相同**：
+
+| 平台 | 定位 |
+|---|---|
+| GitHub（主源） | 权威版本、Git 历史、Release 归档 |
+| 魔搭 ModelScope | 国内访问、页面预览、SDK 加载 |
+| 和鲸社区 ModelWhale | 国内访问、在线 Notebook 直接挂载复算 |
+
+三个平台随附的 `MANIFEST.sha256` 哈希值完全一致，可逐文件交叉核对。
+**若某平台内容与 GitHub 主源不一致，一律以 GitHub 主源为准。**
+
+> **除上述本中心自行发布的平台之外，本数据集不授权任何第三方镜像站或代理通道。**
+> 原因：第三方镜像可能指向旧提交、或在转发时改动编码，导致你手上的副本与我们
+> 发布的版本无法对应。一旦出现引用争议，无法追溯。若你所在网络无法直连上述
+> 域名，请提 Issue 说明，我们提供离线副本。
 
 例：下载 CSV（Release 固定版本）
 
