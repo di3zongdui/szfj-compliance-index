@@ -58,7 +58,7 @@ https://github.com/di3zongdui/szfj-compliance-index.
   title     = {中外合作办学项目合规名录（SZFJ Compliance Index）},
   author    = {李洪},
   year      = {2026},
-  version   = {1.0.0},
+  version   = {1.0.2},
   publisher = {上海中外合办升学数据研究中心},
   address   = {上海},
   license   = {CC BY 4.0},
@@ -100,11 +100,16 @@ Li, Hong. 2026. SZFJ Compliance Index: A Compliance Registry of
 
 | 项 | 值 |
 |---|---|
-| 当前版本 | 1.0.0 |
-| 站点展示版本号 | v1.0（同一次发布） |
-| 发布日期 | 2026-09-30 |
-| Release | https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.0 |
+| 当前版本（引用与下载用） | 1.0.2 |
+| 数据版本号（数据文件命名用） | v1.0 |
+| 数据时点 | 2026-09-30 |
+| Release | https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.2 |
 | DOI | 暂未申请 |
+
+> **两个版本号不是一回事**，这是刻意的：`v1.0` 是**数据版本**（决定数据文件名
+> `szfj-compliance-index-v1.0.*` 与站点展示）；`v1.0.2` 是**发布 tag**（决定下载与
+> 引用指向）。v1.0.0 → v1.0.2 之间只有文档与校验链更正，587 条记录未变。
+> 引用与下载一律用 `v1.0.2`。
 
 **关于 DOI**：如需在正式出版场景引用，建议使用 Release 页面上的固定链接
 （该链接指向不可变版本，而不是 `main` 分支）。仓库已放置 `.zenodo.json`，

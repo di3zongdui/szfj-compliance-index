@@ -60,8 +60,15 @@ cooperative education in mainland China:
 
 | Use | URL |
 |---|---|
-| Pinned version (recommended) | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.0/<filename>` |
+| Pinned version (use this when citing) | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.2/<filename>` |
+| Follow the latest release | `https://github.com/di3zongdui/szfj-compliance-index/releases/latest/download/<filename>` |
 | Latest corrections | `https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main/<path>` |
+
+> **Do not use `v1.0.0`.** Its data files are equivalent to this release
+> (`data/*.csv` and `data/*.jsonl` are byte-identical; `data/*.json` differs only
+> in two `meta` fields), but its bundled README has a delivery-mode table whose
+> rows sum to 135 instead of the actual 137 non-MOE programs. See
+> [CHANGELOG.md](CHANGELOG.md).
 
 > **This dataset is distributed only from the official URLs above. Third-party
 > mirrors and proxies are not authorized.** Mirrors may lag behind or alter

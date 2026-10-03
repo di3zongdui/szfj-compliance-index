@@ -2,6 +2,63 @@
 
 本文件记录数据集发布的全部版本。数据文件与站点展示的版本号对应关系见各条目。
 
+**两个版本号不是一回事**：`v1.0` 是**数据版本**（数据文件命名与站点展示），
+`v1.0.x` 是**发布 tag**（下载地址与引用指向）。历史条目按当时口径书写，不追改。
+
+## v1.0.2 - 2026-10-03
+
+**版本指向更正。** v1.0.1 修正了文档内容，却没有同步修正「指向哪个版本」的说明 ——
+于是修好的说明本身指向了**未修正的 v1.0.0**。本版本补上这一环。
+
+**更正：v1.0.1 条目中的文件计数错误**
+
+v1.0.1 条目称「只有 3 个文件发生变化」，实际为 **5 个**（经 GitHub compare API
+逐文件核对 `78c960bb3d...ede551352cd7`）：
+
+| 文件 | 变化 |
+|---|---|
+| README.md | +26 / -7 |
+| docs/statistics.md | +4 / -1 |
+| MANIFEST.sha256 | +4 / -4 |
+| CHANGELOG.md | +39 / -0 |
+| `data/szfj-compliance-index-v1.0.json` | +1 / -1 |
+
+被漏计的是 `data/szfj-compliance-index-v1.0.json` —— 它**是数据文件，不是文档**。
+该文件仅 `meta.generated_at` 一个字段变化（可复现性修复），587 条 `records` 与
+`facets` / `stats` / `compliance_levels` 逐字节未变；`data/*.csv` 与
+`data/*.jsonl` 经 sha256 比对确认与 v1.0.0 完全一致。漏计一个数据文件，会让
+「只有文档变化」这个判断失真——而这正是引用者最需要准确知道的事。
+
+**更正：所有「权威版本」指向**
+
+以下位置原均指向 `v1.0.0`，即**未经本系列修正的版本**。照这些说明下载，拿到的
+zip 内附 README 仍带「培养模式表相加 135≠137」的漏列问题：
+
+| 文件 | 原值 |
+|---|---|
+| `README.md` / `README.en.md` | 固定版本下载地址、权威 tag 声明 |
+| `CITATION.cff` | `version`、`date-released`、`identifiers.url` |
+| `docs/citation.md` | BibTeX `version`、版本表、Release 链接 |
+| `data/szfj-compliance-index-v1.0.json` | `meta.release_tag` |
+
+现统一指向 `v1.0.2`。
+
+**新增：`releases/latest/download/` 稳定别名**
+
+README 新增一行「跟随最新发布」地址
+`https://github.com/di3zongdui/szfj-compliance-index/releases/latest/download/<文件名>`。
+本次缺陷的成因就是「文档里写死了具体 tag，每次发布都要手工同步」；换成稳定别名后，
+只在下述固定版本行需要随版本更新。
+
+**引用影响：无。** 587 条 `records` 未变，`facets` / `stats` / `compliance_levels`
+未变，`data/*.csv` 与 `data/*.jsonl` 逐字节未变。本版本变化的只有文档、
+`MANIFEST.sha256`、以及 `data/*.json` 的 2 个 `meta` 字段
+（`generated_at` 确定性化、`release_tag` 版本指向）。
+
+**资产补齐**：v1.0.1 的 Release 只上传了整包 zip，缺 4 个单文件资产（若 README
+指向该 tag 的 csv 会 404）。本版本上传与 v1.0.0 对齐的 5 个资产：
+`csv` / `json` / `jsonl` / `facets.json` / `zip`。
+
 ## v1.0.1 - 2026-10-03
 
 文档与校验链更正。**587 条记录、`facets`、`stats`、`compliance_levels` 全部逐字节未变**
