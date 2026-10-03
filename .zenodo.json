@@ -1,0 +1,41 @@
+{
+  "title": "中外合作办学项目合规名录（SZFJ Compliance Index）",
+  "upload_type": "dataset",
+  "description": "覆盖 587 条记录的本科层次中外合作办学项目合规名录，含 450 所计划内备案院校（S/A/B 三档）与 137 个计划外项目（L2 MOE 备案计划外、L3 中留服项目、L4 校际自主跨境）。逐条记录项目名称、国内开办高校、省级行政区、境外合作院校、培养模式、招生录取方式、国内段年学费、学历学位授予情况、教育部备案编号、合规层级与合规风险等级，并附信息来源。用于回答「这个项目是不是真的」这类合规判定问题，不做院校声誉评比。",
+  "creators": [
+    {
+      "name": "李洪",
+      "affiliation": "上海中外合办升学数据研究中心",
+      "orcid": ""
+    },
+    {
+      "name": "上海中外合办升学数据研究中心"
+    }
+  ],
+  "contributors": [],
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "中外合作办学",
+    "合规",
+    "高等教育",
+    "升学",
+    "计划外项目",
+    "学历认证",
+    "SZFJ",
+    "China",
+    "higher education",
+    "compliance"
+  ],
+  "language": "zho",
+  "version": "1.0.0",
+  "publication_date": "2026-09-30",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/di3zongdui/szfj-compliance-index",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    }
+  ],
+  "notes": "本数据集为信息整理成果，非政府机构官方发布物。引用前请阅读 docs/limits.md 中的已知局限。"
+}

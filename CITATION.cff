@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata below. 若使用本数据，请按下列信息引用。"
+title: "中外合作办学项目合规名录（SZFJ Compliance Index）"
+abstract: >-
+  覆盖 587 条记录的本科层次中外合作办学项目合规名录，含 450 所计划内备案院校
+  （S/A/B 三档）与 137 个计划外项目（L2 MOE 备案计划外、L3 中留服项目、
+  L4 校际自主跨境）。逐条记录项目名称、国内开办高校、省级行政区、境外合作院校、
+  培养模式、招生录取方式、国内段年学费、学历学位授予情况、教育部备案编号、
+  合规层级与合规风险等级，并附信息来源。用于回答「这个项目是不是真的」
+  这类合规判定问题，不做院校声誉评比。
+type: dataset
+version: "1.0.0"
+date-released: "2026-09-30"
+license: CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+repository-code: "https://github.com/di3zongdui/szfj-compliance-index"
+url: "https://github.com/di3zongdui/szfj-compliance-index"
+keywords:
+  - 中外合作办学
+  - 合规
+  - 高等教育
+  - 升学
+  - 计划外项目
+  - 学历认证
+  - SZFJ
+  - China
+  - higher education
+  - compliance
+authors:
+  - family-names: "李"
+    given-names: "洪"
+    alias: "Anna Lee"
+    affiliation: "上海中外合办升学数据研究中心"
+  - name: "上海中外合办升学数据研究中心"
+identifiers:
+  - type: url
+    value: "https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.0"
+    description: "Release v1.0.0 (stable download)"
+contact:
+  - family-names: "李"
+    given-names: "洪"
+    email: "15618198831@163.com"
+    affiliation: "上海中外合办升学数据研究中心"

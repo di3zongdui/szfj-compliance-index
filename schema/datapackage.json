@@ -1,0 +1,73 @@
+{
+ "name": "szfj-compliance-index",
+ "title": "中外合作办学项目合规名录",
+ "id": "SZFJ Compliance Index",
+ "version": "v1.0",
+ "description": "本科层次：计划内备案院校（450 所）+ 计划外项目（137 个）。不与胡润百学/HKPEP 争\"哪所好\"（机构声誉榜）；本名录只回答\"哪个是真的\"（项目合规性判定）",
+ "homepage": "https://github.com/di3zongdui/szfj-compliance-index",
+ "created": "2026-09-30",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0",
+   "path": "https://creativecommons.org/licenses/by/4.0/",
+   "title": "Creative Commons Attribution 4.0 International"
+  }
+ ],
+ "contributors": [
+  {
+   "title": "李洪",
+   "role": "author",
+   "email": "15618198831@163.com",
+   "organization": "上海中外合办升学数据研究中心"
+  }
+ ],
+ "keywords": [
+  "中外合作办学",
+  "合规",
+  "升学",
+  "高等教育",
+  "SZFJ",
+  "China"
+ ],
+ "sources": [
+  {
+   "title": "教育部涉外监管信息网",
+   "path": "https://crs.jsj.edu.cn"
+  },
+  {
+   "title": "各校招生简章（公开渠道）"
+  }
+ ],
+ "resources": [
+  {
+   "name": "records-json",
+   "path": "data/szfj-compliance-index-v1.0.json",
+   "profile": "dataresource",
+   "format": "json",
+   "mediatype": "application/json"
+  },
+  {
+   "name": "records-csv",
+   "path": "data/szfj-compliance-index-v1.0.csv",
+   "profile": "tabular-data-resource",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8-sig",
+   "schema": "schema/szfj-compliance-index.schema.json"
+  },
+  {
+   "name": "records-jsonl",
+   "path": "data/szfj-compliance-index-v1.0.jsonl",
+   "profile": "dataresource",
+   "format": "jsonl",
+   "mediatype": "application/x-ndjson"
+  },
+  {
+   "name": "facets",
+   "path": "data/szfj-compliance-index-v1.0-facets.json",
+   "profile": "dataresource",
+   "format": "json",
+   "mediatype": "application/json"
+  }
+ ]
+}

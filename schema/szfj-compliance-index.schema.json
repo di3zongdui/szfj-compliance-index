@@ -1,0 +1,197 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "https://github.com/di3zongdui/szfj-compliance-index/blob/main/schema/szfj-compliance-index.schema.json",
+ "title": "中外合作办学项目合规名录 · 记录结构",
+ "description": "SZFJ Compliance Index v1.0 单条记录的结构定义。",
+ "type": "object",
+ "required": [
+  "id",
+  "level",
+  "name",
+  "province",
+  "risk_level"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "title": "记录唯一标识",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "level": {
+   "title": "合规层级 L1-L4",
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    null
+   ]
+  },
+  "band": {
+   "title": "L1 内部档位 S/A/B",
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "S",
+    "A",
+    "B",
+    null
+   ]
+  },
+  "name": {
+   "title": "项目或机构名称",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "host": {
+   "title": "国内开办高校",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "province": {
+   "title": "所在省级行政区",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "partner": {
+   "title": "境外合作院校",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "mode": {
+   "title": "培养模式（原始文本）",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "admission_mode": {
+   "title": "招生录取方式",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "tuition_year": {
+   "title": "国内段年学费（原始文本）",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "certificates": {
+   "title": "学历学位授予情况",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "moe_code": {
+   "title": "教育部备案编号",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "program_type": {
+   "title": "计划外项目类型",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "qs_rank_partner": {
+   "title": "境外合作院校 QS 排名",
+   "type": [
+    "integer",
+    "null"
+   ]
+  },
+  "competitive_level": {
+   "title": "竞争度标注 2-5",
+   "type": [
+    "integer",
+    "null"
+   ]
+  },
+  "risk_level": {
+   "title": "合规风险等级",
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "none",
+    "low",
+    "medium",
+    "high",
+    null
+   ]
+  },
+  "risk_notes": {
+   "title": "风险说明（转录）",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "sources": {
+   "title": "信息来源",
+   "type": [
+    "array",
+    "null"
+   ],
+   "items": {
+    "type": "string"
+   }
+  },
+  "mode_family": {
+   "title": "培养模式族（派生）",
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "2+2",
+    "3+1",
+    "4+0",
+    "1+N",
+    "2+1",
+    "3+0",
+    "灵活",
+    "其他",
+    null
+   ]
+  },
+  "degree_type": {
+   "title": "学位结构判定（派生，仅 L2-L4）",
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "dual",
+    "single",
+    "other",
+    null
+   ]
+  }
+ }
+}

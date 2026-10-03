@@ -1,0 +1,15 @@
+# 统一行尾为 LF。本项目历史上因 CRLF/LF 混用导致过整文件级合并冲突，
+# 此处显式声明，避免数据集在不同平台 clone 后产生无意义的 diff。
+* text=auto eol=lf
+
+# 数据文件必须逐字节稳定，禁止任何自动转换 —— 否则 sha256 校验会失效
+*.json   text eol=lf
+*.jsonl  text eol=lf
+*.csv    text eol=lf
+*.md     text eol=lf
+*.cff    text eol=lf
+MANIFEST.sha256 text eol=lf
+
+# 二进制
+*.png binary
+*.zip binary
