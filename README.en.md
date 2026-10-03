@@ -60,7 +60,7 @@ cooperative education in mainland China:
 
 | Use | URL |
 |---|---|
-| Pinned version (use this when citing) | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.2/<filename>` |
+| Pinned version (use this when citing) | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/<filename>` |
 | Follow the latest release | `https://github.com/di3zongdui/szfj-compliance-index/releases/latest/download/<filename>` |
 | Latest corrections | `https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main/<path>` |
 

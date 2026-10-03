@@ -104,20 +104,20 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 ## 四、快速开始
 
 **直接下载**：见仓库根目录 `data/` 目录，或
-[Release v1.0.2](https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.2)。
+[Release v1.0.3](https://github.com/di3zongdui/szfj-compliance-index/releases/tag/v1.0.3)。
 
 **下载地址**
 
 | 用途 | 地址 |
 |---|---|
-| 固定版本（引用时请用这个） | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.2/<文件名>` |
+| 固定版本（引用时请用这个） | `https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/<文件名>` |
 | 跟随最新发布 | `https://github.com/di3zongdui/szfj-compliance-index/releases/latest/download/<文件名>` |
 | 跟随最新更正 | `https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main/<路径>` |
 | 国内访问 | 魔搭 ModelScope / 和鲸社区 ModelWhale，见下方「分发平台」 |
 
 **分发平台**
 
-**唯一权威源是 GitHub 仓库 [`di3zongdui/szfj-compliance-index`](https://github.com/di3zongdui/szfj-compliance-index) 的 tag `v1.0.2`。**
+**唯一权威源是 GitHub 仓库 [`di3zongdui/szfj-compliance-index`](https://github.com/di3zongdui/szfj-compliance-index) 的 tag `v1.0.3`。**
 
 > **不要用 `v1.0.0`**。它的数据文件与本版本等价（`data/*.csv`、`data/*.jsonl`
 > 逐字节相同；`data/*.json` 仅 2 个 `meta` 字段不同），但它的 zip 内附 README
@@ -143,7 +143,7 @@ L1 内部另分 S/A/B 三档（S 档 14 所、A 档 131 所、B 档 305 所）�
 例：下载 CSV（Release 固定版本）
 
 ```bash
-curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.2/szfj-compliance-index-v1.0.csv
+curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/szfj-compliance-index-v1.0.csv
 ```
 
 **Python（pandas）**
@@ -173,15 +173,22 @@ curl -sL https://raw.githubusercontent.com/di3zongdui/szfj-compliance-index/main
 **校验完整性**
 
 ```bash
-curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.2/szfj-compliance-index-v1.0.2.zip
-unzip szfj-compliance-index-v1.0.2.zip
+curl -LO https://github.com/di3zongdui/szfj-compliance-index/releases/download/v1.0.3/szfj-compliance-index-v1.0.3.zip
+unzip szfj-compliance-index-v1.0.3.zip
 cd szfj-compliance-index-v1.0
 sha256sum -c MANIFEST.sha256
 ```
 
-`MANIFEST.sha256` 覆盖发布目录全部 21 个文件（含本 README 与方法论文档），
+`MANIFEST.sha256` 覆盖发布内容的全部 **20** 个文件（含本 README 与方法论文档），
 逐文件比对哈希即可确认手上的副本未被改动。**请务必先解压并进入顶层目录**，
 在校验文件所在目录执行，否则 `-c` 会因找不到文件而全部报错。
+
+> **不纳入清单的两个文件**：`.gitattributes` 与 `.ms_upload_cache`。
+> 前者会被托管平台改写 —— 实测魔搭 CLI 会往它**追加自己的 LFS 规则**
+> （本地 478 字节，魔搭上 706 字节），因此它在不同平台上不可能逐字节相同；
+> 后者是上传工具在本地的缓存。把这两个文件放进清单，只会让**每个**在魔搭
+> 下载副本的人看到一条假的「校验失败」。校验清单只覆盖「在任何平台都应当
+> 逐字节相同」的文件。
 
 **独立复算全部数字**
 
